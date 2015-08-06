@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B361101E-0716-476F-855F-06B291A3F336}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Xevle.FileFormats.TMX</RootNamespace>
+    <AssemblyName>Xevle.FileFormats.TMX</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Object.cs" />
+    <Compile Include="Objectgroup.cs" />
+    <Compile Include="Property.cs" />
+    <Compile Include="TilesetNotExistsException.cs" />
+    <Compile Include="TMX.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="TilesetData.cs" />
+    <Compile Include="LayerData.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Xevle.Imaging\Xevle.Imaging.csproj">
+      <Project>{0C1AF5DE-07CC-432B-9BA1-471944DCED8F}</Project>
+      <Name>Xevle.Imaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xevle.IO\Xevle.IO.csproj">
+      <Project>{FF1643AA-E194-4145-8248-028ED9503EB4}</Project>
+      <Name>Xevle.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xevle.Core\Xevle.Core.csproj">
+      <Project>{4D90F3D7-F459-4272-A2FB-7A6B6987EA2D}</Project>
+      <Name>Xevle.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xevle.Data\Xevle.Data.csproj">
+      <Project>{CB1B852A-48EF-43D3-94A4-B0EE4EF82ABD}</Project>
+      <Name>Xevle.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
